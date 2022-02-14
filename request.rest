@@ -1,0 +1,106 @@
+GET http://localhost:5000/products
+###
+GET http://localhost:5000/products/109
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "title": "Product 11",
+    "price": 111
+}
+
+###
+PATCH  http://localhost:5000/products/1
+Content-Type: application/json
+
+{
+    "title": "Product 1 updated",
+    "price": 123
+}
+
+###
+DELETE http://localhost:5000/products/3
+ 
+###
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsIm5hbWUiOiJBbHdhbiBOYWFhd2ViIiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2NDI0OTg4OTUsImV4cCI6MTY0MjQ5ODkxNX0.Bbq_bAXCCWIDMW_tHL5-lgSnp8lJZ7JzrHbGmqmepM8
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Alwan Naaaweb",
+    "email": "alwan@gmail.com",
+    "password": "12345",
+    "confPassword": "12345"
+
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "email@gmail.com",
+    "password": "12345"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/cpu_user
+###
+GET http://localhost:5000/cpu_user/90
+
+###
+POST http://localhost:5000/cpu_user
+Content-Type: application/json
+
+{
+    "kode_inventaris": "ggn1238ss",
+    "pembelian_id": 12345
+}
+
+###
+PATCH  http://localhost:5000/cpu_user/1
+Content-Type: application/json
+
+{
+    "kode_inventaris": "ggn1238ss updated",
+    "pembelian_id": 54321
+}
+
+###
+DELETE http://localhost:5000/cpu_user/3
+
+###
+GET http://localhost:5000/cpu
+###
+GET http://localhost:5000/cpu/90
+
+###
+POST http://localhost:5000/cpu
+Content-Type: application/json
+
+{
+    "cpu_id": "123",
+    "hardware_category_id": 2
+}
+
+###
+PATCH  http://localhost:5000/cpu/1
+Content-Type: application/json
+
+{
+    "cpu_id": "0123",
+    "hardware_category_id": 2
+}
+
+###
+DELETE http://localhost:5000/cpu/3
+ 
