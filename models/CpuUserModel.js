@@ -6,7 +6,7 @@ const CpuUser = db.define(
   {
     cpu_user_id: Sequelize.INTEGER,
     cpu_id: Sequelize.INTEGER,
-    karyawan_id: Sequelize.INTEGER,
+    pegawai_id: Sequelize.INTEGER,
     operator_it_id: Sequelize.INTEGER,
     riwayat_perbaikan_id: Sequelize.INTEGER,
     pembelian_id: Sequelize.INTEGER,

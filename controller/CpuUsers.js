@@ -2,10 +2,10 @@ import CpuUser from "../models/CpuUserModel.js"
 
 export const getAllCpuUser = async (req, res) => {
   try {
-    const cpuUsers = await CpuUser.findAll()
-    const cekMessage = () => (cpuUsers.length > 0 ? "cpu Users Ditemukan" : "cpu Users Tidak Ditemukan")
+    const cpu_user = await CpuUser.findAll()
+    const cekMessage = () => (cpu_user.length > 0 ? "cpu Users Ditemukan" : "cpu Users Tidak Ditemukan")
 
-    res.json({ message: cekMessage(), cpuUsers })
+    res.json({ message: cekMessage(), cpu_user })
   } catch (error) {
     res.json({ message: error.message })
   }
