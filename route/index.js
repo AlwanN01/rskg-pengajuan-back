@@ -43,7 +43,7 @@ router.get("/pegawai", getAllKaryawan)
 router.get("/karyawan/:id", getKaryawanById)
 router.post("/karyawan", createKaryawan)
 router.patch("/karyawan/:id", updateKaryawan)
-router.delete("/karyawan/:id", deleteKaryawan)
+router.delete("/pegawai/:id", deleteKaryawan)
 
 router.get("/wilayah", getAllWilayah)
 router.get("/kota", getAllKota)

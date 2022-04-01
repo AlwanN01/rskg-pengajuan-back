@@ -16,8 +16,7 @@ const storage = multer.diskStorage({
     cb(null, "./public/fileUpload")
   },
   filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9)
-    cb(null, file.fieldname + "-" + uniqueSuffix)
+    cb(null, path.parse(file.originalname).name + "-" + Date.now() + path.extname(file.originalname))
   }
 })
 
@@ -25,7 +24,7 @@ const upload = multer({ storage })
 
 app.post("/api/upload", upload.single("photo"), (req, res) => {
   //save db
-  let finalImageURL = req.protocol + "://" + req.get("host") + "/uploads" + req.file.filename
+  let finalImageURL = req.protocol + "://" + req.get("host") + "/fileUpload/" + req.file.filename
   res.json({ status: "success", image: finalImageURL })
 })
 

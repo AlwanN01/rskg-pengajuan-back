@@ -26,9 +26,10 @@ export const getKaryawanById = async (req, res) => {
 
 export const createKaryawan = async (req, res) => {
   try {
-    await Karyawan.create(req.body)
+    await Karyawan.create(req.body, { foto_pegawai: "tes" })
     res.json({
-      message: "Karyawan Created"
+      message: "Karyawan Created",
+      body: req.body
     })
   } catch (error) {
     res.json({ message: error.message })
